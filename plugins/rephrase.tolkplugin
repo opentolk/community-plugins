@@ -1,0 +1,36 @@
+{
+  "id": "com.opentolk.rephrase",
+  "name": "Rephrase",
+  "version": "1.0.0",
+  "description": "Rewrite text for better clarity and flow",
+  "author": { "name": "OpenTolk", "url": "https://github.com/opentolk" },
+  "categories": ["ai", "writing"],
+  "permissions": ["ai"],
+
+  "trigger": {
+    "type": "keyword",
+    "keywords": ["rephrase", "rewrite", "improve"],
+    "position": "start",
+    "strip_trigger": true
+  },
+
+  "execution": {
+    "type": "ai",
+    "system_prompt": "Rephrase the following text to be clearer and more professional while keeping the same meaning. Match the tone: {{settings.tone}}. Output only the rephrased text.",
+    "temperature": 0.5
+  },
+
+  "output": {
+    "mode": "paste"
+  },
+
+  "settings": [
+    {
+      "key": "tone",
+      "label": "Writing Tone",
+      "type": "select",
+      "options": ["Professional", "Casual", "Friendly", "Formal", "Concise"],
+      "default": "Professional"
+    }
+  ]
+}

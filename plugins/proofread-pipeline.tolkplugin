@@ -1,0 +1,28 @@
+{
+  "id": "com.opentolk.proofread-pipeline",
+  "name": "Proofread & Polish",
+  "version": "1.0.0",
+  "description": "Fix grammar then rephrase for clarity (two-step pipeline)",
+  "author": { "name": "OpenTolk", "url": "https://github.com/opentolk" },
+  "categories": ["ai", "writing", "productivity"],
+  "permissions": ["ai"],
+
+  "trigger": {
+    "type": "keyword",
+    "keywords": ["proofread", "polish"],
+    "position": "start",
+    "strip_trigger": true
+  },
+
+  "execution": {
+    "type": "pipeline",
+    "steps": [
+      { "plugin": "com.opentolk.grammar-fix" },
+      { "plugin": "com.opentolk.rephrase" }
+    ]
+  },
+
+  "output": {
+    "mode": "paste"
+  }
+}

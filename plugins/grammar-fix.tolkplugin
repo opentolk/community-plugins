@@ -1,0 +1,26 @@
+{
+  "id": "com.opentolk.grammar-fix",
+  "name": "Grammar Fix",
+  "version": "1.0.0",
+  "description": "Fix grammar, spelling, and punctuation",
+  "author": { "name": "OpenTolk", "url": "https://github.com/opentolk" },
+  "categories": ["ai", "writing"],
+  "permissions": ["ai"],
+
+  "trigger": {
+    "type": "keyword",
+    "keywords": ["fix", "grammar", "correct"],
+    "position": "start",
+    "strip_trigger": true
+  },
+
+  "execution": {
+    "type": "ai",
+    "system_prompt": "Fix all grammar, spelling, and punctuation errors in the following text. Keep the original meaning and tone. Output only the corrected text, nothing else.",
+    "temperature": 0.2
+  },
+
+  "output": {
+    "mode": "paste"
+  }
+}

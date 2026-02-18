@@ -1,0 +1,26 @@
+{
+  "id": "com.opentolk.define",
+  "name": "Define",
+  "version": "1.0.0",
+  "description": "Get dictionary definitions for any word or phrase",
+  "author": { "name": "OpenTolk", "url": "https://github.com/opentolk" },
+  "categories": ["ai", "productivity"],
+  "permissions": ["ai"],
+
+  "trigger": {
+    "type": "keyword",
+    "keywords": ["define", "what does", "meaning of"],
+    "position": "start",
+    "strip_trigger": true
+  },
+
+  "execution": {
+    "type": "ai",
+    "system_prompt": "Provide a clear, concise definition for the given word or phrase. Include: 1) The definition, 2) Part of speech, 3) One example sentence. Keep it brief.",
+    "temperature": 0.2
+  },
+
+  "output": {
+    "mode": "notify"
+  }
+}

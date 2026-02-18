@@ -1,0 +1,29 @@
+{
+  "id": "com.opentolk.explain-code",
+  "name": "Explain Code",
+  "version": "1.0.0",
+  "description": "Explain code from your clipboard in plain English",
+  "author": { "name": "OpenTolk", "url": "https://github.com/opentolk" },
+  "categories": ["ai", "developer"],
+  "permissions": ["ai", "clipboard"],
+
+  "trigger": {
+    "type": "keyword",
+    "keywords": ["explain code", "what does this code do", "explain this code"],
+    "position": "start",
+    "strip_trigger": true
+  },
+
+  "execution": {
+    "type": "ai",
+    "system_prompt": "The user will describe code or paste code. Explain what it does in plain English. Be concise. Use bullet points for step-by-step logic. If the input is vague, explain what the code on their clipboard likely does.",
+    "tools": [
+      { "name": "read_clipboard", "type": "builtin" }
+    ]
+  },
+
+  "output": {
+    "mode": "panel",
+    "format": "markdown"
+  }
+}

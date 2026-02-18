@@ -1,0 +1,87 @@
+{
+  "plugins": [
+    {
+      "id": "com.opentolk.translate",
+      "name": "Translate",
+      "version": "1.0.0",
+      "description": "Translate spoken text to any language",
+      "author": "OpenTolk",
+      "categories": ["translation", "ai"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/translate.tolkplugin",
+      "homepage": "https://github.com/opentolk/community-plugins",
+      "featured": true
+    },
+    {
+      "id": "com.opentolk.summarize",
+      "name": "Summarize",
+      "version": "1.0.0",
+      "description": "Condense text into concise key points",
+      "author": "OpenTolk",
+      "categories": ["ai", "productivity"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/summarize.tolkplugin",
+      "homepage": "https://github.com/opentolk/community-plugins",
+      "featured": true
+    },
+    {
+      "id": "com.opentolk.eli5",
+      "name": "Explain Like I'm 5",
+      "version": "1.0.0",
+      "description": "Simplify complex topics into easy explanations",
+      "author": "OpenTolk",
+      "categories": ["ai", "writing"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/eli5.tolkplugin",
+      "homepage": "https://github.com/opentolk/community-plugins",
+      "featured": true
+    },
+    {
+      "id": "com.opentolk.rephrase",
+      "name": "Rephrase",
+      "version": "1.0.0",
+      "description": "Rewrite text for better clarity and flow",
+      "author": "OpenTolk",
+      "categories": ["ai", "writing"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/rephrase.tolkplugin",
+      "homepage": "https://github.com/opentolk/community-plugins"
+    },
+    {
+      "id": "com.opentolk.grammar-fix",
+      "name": "Grammar Fix",
+      "version": "1.0.0",
+      "description": "Fix grammar, spelling, and punctuation",
+      "author": "OpenTolk",
+      "categories": ["ai", "writing"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/grammar-fix.tolkplugin",
+      "homepage": "https://github.com/opentolk/community-plugins"
+    },
+    {
+      "id": "com.opentolk.define",
+      "name": "Define",
+      "version": "1.0.0",
+      "description": "Get dictionary definitions for any word or phrase",
+      "author": "OpenTolk",
+      "categories": ["ai", "productivity"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/define.tolkplugin",
+      "homepage": "https://github.com/opentolk/community-plugins"
+    },
+    {
+      "id": "com.opentolk.explain-code",
+      "name": "Explain Code",
+      "version": "1.0.0",
+      "description": "Explain code from your clipboard in plain English",
+      "author": "OpenTolk",
+      "categories": ["ai", "developer"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/explain-code.tolkplugin",
+      "homepage": "https://github.com/opentolk/community-plugins"
+    },
+    {
+      "id": "com.opentolk.proofread-pipeline",
+      "name": "Proofread & Polish",
+      "version": "1.0.0",
+      "description": "Fix grammar then rephrase for clarity (two-step pipeline)",
+      "author": "OpenTolk",
+      "categories": ["ai", "writing", "productivity"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/proofread-pipeline.tolkplugin",
+      "homepage": "https://github.com/opentolk/community-plugins"
+    }
+  ]
+}

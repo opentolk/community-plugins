@@ -1,0 +1,26 @@
+{
+  "id": "com.opentolk.eli5",
+  "name": "Explain Like I'm 5",
+  "version": "1.0.0",
+  "description": "Simplify complex topics into easy explanations",
+  "author": { "name": "OpenTolk", "url": "https://github.com/opentolk" },
+  "categories": ["ai", "writing"],
+  "permissions": ["ai"],
+
+  "trigger": {
+    "type": "keyword",
+    "keywords": ["explain", "eli5", "simplify"],
+    "position": "start",
+    "strip_trigger": true
+  },
+
+  "execution": {
+    "type": "ai",
+    "system_prompt": "Explain the following as if talking to a 5-year-old. Use simple words, short sentences, and relatable analogies. Be friendly and concise. No jargon.",
+    "temperature": 0.5
+  },
+
+  "output": {
+    "mode": "paste"
+  }
+}

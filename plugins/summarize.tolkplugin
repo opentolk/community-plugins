@@ -1,0 +1,26 @@
+{
+  "id": "com.opentolk.summarize",
+  "name": "Summarize",
+  "version": "1.0.0",
+  "description": "Condense text into concise key points",
+  "author": { "name": "OpenTolk", "url": "https://github.com/opentolk" },
+  "categories": ["ai", "productivity"],
+  "permissions": ["ai"],
+
+  "trigger": {
+    "type": "keyword",
+    "keywords": ["summarize", "summary", "tldr"],
+    "position": "start",
+    "strip_trigger": true
+  },
+
+  "execution": {
+    "type": "ai",
+    "system_prompt": "Summarize the following text into clear, concise bullet points. Focus on the key information. Use 3-5 bullet points. Output only the summary.",
+    "temperature": 0.3
+  },
+
+  "output": {
+    "mode": "paste"
+  }
+}
