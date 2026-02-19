@@ -23,7 +23,8 @@
       { "name": "gmail_check", "type": "builtin", "description": "List recent emails" },
       { "name": "gmail_read", "type": "builtin", "description": "Read a specific email" },
       { "name": "gmail_reply", "type": "builtin", "description": "Reply to an email" },
-      { "name": "gmail_send", "type": "builtin", "description": "Send a new email" }
+      { "name": "gmail_send", "type": "builtin", "description": "Send a new email" },
+      { "name": "gmail_archive", "type": "builtin", "description": "Archive an email" }
     ]
   },
 
