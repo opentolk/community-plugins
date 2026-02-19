@@ -82,6 +82,16 @@
       "categories": ["ai", "writing", "productivity"],
       "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/proofread-pipeline.tolkplugin",
       "homepage": "https://github.com/opentolk/community-plugins"
+    },
+    {
+      "id": "com.opentolk.gmail-assistant",
+      "name": "Gmail Assistant",
+      "version": "1.0.0",
+      "description": "Check, read, and reply to Gmail by voice",
+      "author": "OpenTolk",
+      "categories": ["ai", "productivity", "email"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/gmail-assistant.tolkplugin.zip",
+      "homepage": "https://github.com/opentolk/community-plugins"
     }
   ]
 }

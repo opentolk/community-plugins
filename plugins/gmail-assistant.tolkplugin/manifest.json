@@ -1,0 +1,34 @@
+{
+  "id": "com.opentolk.gmail-assistant",
+  "name": "Gmail Assistant",
+  "version": "1.0.0",
+  "description": "Check, read, and reply to Gmail by voice",
+  "author": { "name": "OpenTolk" },
+  "categories": ["productivity", "email", "ai"],
+  "permissions": ["network", "ai", "gmail"],
+
+  "trigger": {
+    "type": "keyword",
+    "keywords": ["email", "gmail", "inbox", "mail"],
+    "position": "anywhere",
+    "strip_trigger": false
+  },
+
+  "execution": {
+    "type": "ai",
+    "system_prompt_file": "system-prompt.md",
+    "conversational": true,
+    "streaming": true,
+    "tools": [
+      { "name": "gmail_check", "type": "builtin", "description": "List recent emails" },
+      { "name": "gmail_read", "type": "builtin", "description": "Read a specific email" },
+      { "name": "gmail_reply", "type": "builtin", "description": "Reply to an email" },
+      { "name": "gmail_send", "type": "builtin", "description": "Send a new email" }
+    ]
+  },
+
+  "output": {
+    "mode": "reply",
+    "format": "markdown"
+  }
+}
