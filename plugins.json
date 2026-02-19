@@ -92,6 +92,17 @@
       "categories": ["ai", "productivity", "email"],
       "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/gmail-assistant.tolkplugin.zip",
       "homepage": "https://github.com/opentolk/community-plugins"
+    },
+    {
+      "id": "com.opentolk.tavily-search",
+      "name": "Tavily Web Search",
+      "version": "1.0.0",
+      "description": "AI-optimized web search and URL content extraction via Tavily API",
+      "author": "OpenTolk",
+      "categories": ["ai", "search", "productivity"],
+      "url": "https://raw.githubusercontent.com/opentolk/community-plugins/main/plugins/tavily-search.tolkplugin.zip",
+      "homepage": "https://tavily.com",
+      "featured": true
     }
   ]
 }
