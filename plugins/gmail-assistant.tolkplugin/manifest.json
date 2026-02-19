@@ -9,8 +9,8 @@
 
   "trigger": {
     "type": "keyword",
-    "keywords": ["email", "gmail", "inbox", "mail"],
-    "position": "anywhere",
+    "keywords": ["check email", "check my email", "check mail", "read email", "read my email", "open inbox", "open email", "open gmail", "email check", "gmail"],
+    "position": "start",
     "strip_trigger": false
   },
 
