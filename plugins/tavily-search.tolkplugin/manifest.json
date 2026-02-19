@@ -1,0 +1,87 @@
+{
+  "id": "com.opentolk.tavily-search",
+  "name": "Tavily Web Search",
+  "version": "1.0.0",
+  "description": "AI-optimized web search and URL content extraction via Tavily API",
+  "author": { "name": "OpenTolk", "url": "https://github.com/opentolk" },
+  "categories": ["search", "ai", "productivity"],
+  "permissions": ["network", "ai"],
+
+  "trigger": {
+    "type": "keyword",
+    "keywords": ["search", "search the web", "web search", "look up", "find out"],
+    "position": "start",
+    "strip_trigger": true
+  },
+
+  "execution": {
+    "type": "ai",
+    "system_prompt_file": "system-prompt.md",
+    "conversational": true,
+    "streaming": true,
+    "tools": [
+      {
+        "name": "tavily_search",
+        "type": "script",
+        "command": "scripts/search.sh",
+        "description": "Search the web using Tavily. Returns an AI-generated answer and a list of relevant sources with snippets.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The search query"
+            },
+            "max_results": {
+              "type": "number",
+              "description": "Number of results to return (1-20, default 5)"
+            },
+            "search_depth": {
+              "type": "string",
+              "enum": ["basic", "advanced"],
+              "description": "Use 'advanced' for deeper research on complex questions"
+            },
+            "topic": {
+              "type": "string",
+              "enum": ["general", "news"],
+              "description": "Search topic. Use 'news' for current events."
+            }
+          },
+          "required": ["query"]
+        }
+      },
+      {
+        "name": "tavily_extract",
+        "type": "script",
+        "command": "scripts/extract.sh",
+        "description": "Extract and read the full content of a web page URL. Useful for reading articles, documentation, or any web page.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "description": "The URL to extract content from"
+            }
+          },
+          "required": ["url"]
+        }
+      }
+    ]
+  },
+
+  "output": {
+    "mode": "reply",
+    "format": "markdown"
+  },
+
+  "settings": [
+    {
+      "key": "tavily_api_key",
+      "label": "Tavily API Key",
+      "type": "secret",
+      "required": true,
+      "placeholder": "tvly-...",
+      "description": "Get your API key from https://tavily.com"
+    }
+  ]
+}
